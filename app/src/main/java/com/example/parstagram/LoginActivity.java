@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.LogInCallback;
+import com.parse.LogOutCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
@@ -61,12 +62,13 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Issue with login!", Toast.LENGTH_SHORT);
                     return;
                 }
-                // TODO: navigate to the main activity if the user has signed in properly
                 goMainActivity();
                 Toast.makeText(LoginActivity.this,"Success!", Toast.LENGTH_SHORT);
             }
         });
     }
+
+
 
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
